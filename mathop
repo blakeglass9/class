@@ -1,0 +1,20 @@
+using System;
+
+namespace MathApp2  
+{
+    // Static class for math operations
+    public static class MathOperations
+    {
+        // Method to divide an integer by 2 and return the result using an output parameter
+        public static void DivideByTwo(int input, out int result)
+        {
+            result = input / 2;  // Divide the input by 2 and set the output parameter
+        }
+
+        // Overloaded method to divide a double by 2 and return the result using an output parameter
+        public static void DivideByTwo(double input, out double result)
+        {
+            result = input / 2.0;  // Divide the input by 2.0 and set the output parameter
+        }
+    }
+}
