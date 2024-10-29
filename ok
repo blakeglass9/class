@@ -1,0 +1,34 @@
+using System;
+
+namespace MathApp2  
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number:");
+            int userInput;
+            while (!int.TryParse(Console.ReadLine(), out userInput))
+            {
+                Console.WriteLine("Please enter a valid integer.");
+            }
+
+            int resultInt;
+            MathOperations.DivideByTwo(userInput, out resultInt);
+            Console.WriteLine($"Half of {userInput} (integer) is: {resultInt}");
+
+            Console.WriteLine("\nEnter a decimal number:");
+            double userDouble;
+            while (!double.TryParse(Console.ReadLine(), out userDouble))
+            {
+                Console.WriteLine("Please enter a valid decimal number.");
+            }
+
+            double resultDouble;
+            MathOperations.DivideByTwo(userDouble, out resultDouble);
+            Console.WriteLine($"Half of {userDouble} (double) is: {resultDouble}");
+
+            Console.ReadKey();
+        }
+    }
+}
